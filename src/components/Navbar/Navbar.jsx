@@ -4,7 +4,7 @@ const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-primary">
 			<a className="navbar-brand" href="/">
-				E-Commerce
+				Iuris E-Commerce
 			</a>
 
 			<div className="collapse navbar-collapse" id="navbarNavAltMarkup">
