@@ -1,10 +1,11 @@
-import CartWidget from "../Cardwidget";
+import React from "react";
+import CartWidget from "../CartWidget";
 
 const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-primary">
 			<a className="navbar-brand" href="/">
-				Iuris E-Commerce
+				Iuris-Tech
 			</a>
 
 			<div className="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -13,14 +14,13 @@ const Navbar = () => {
 						Home
 					</a>
 					<a className="nav-item nav-link" href="/">
-						Courses
+						Computers
 					</a>
 					<a className="nav-item nav-link" href="/">
-						Consulting
+						Phones
 					</a>
 				</div>
 			</div>
-
 			<CartWidget />
 
 			<button
