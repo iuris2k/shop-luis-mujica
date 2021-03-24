@@ -20,7 +20,7 @@ function App() {
         ItemListContainer / >
         <
         /Route>{" "} <
-        Route path = '/list' >
+        Route path = '/Home' >
         <
         ItemListContainer greeting = 'look here our catalog!' / >
         <
