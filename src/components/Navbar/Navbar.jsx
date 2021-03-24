@@ -1,38 +1,48 @@
 import React from "react";
 import CartWidget from "../CartWidget";
 
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-			<a className="navbar-brand" href="/">
+		<nav className='navbar navbar-expand-lg navbar-dark bg-primary'>
+			<NavLink to='/' activeClassName='active' className='navbar-brand'>
 				Iuris-Tech
-			</a>
+			</NavLink>
 
-			<div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-				<div className="navbar-nav">
-					<a className="nav-item nav-link active" href="/">
+			<div className='collapse navbar-collapse' id='navbarNavAltMarkup'>
+				<div className='navbar-nav'>
+					<NavLink
+						to='/Home'
+						activeClassName='active'
+						className='nav-item nav-link active'>
 						Home
-					</a>
-					<a className="nav-item nav-link" href="/">
+					</NavLink>
+					<NavLink
+						to='/Computers'
+						activeClassName='active'
+						className='nav-item nav-link'>
 						Computers
-					</a>
-					<a className="nav-item nav-link" href="/">
+					</NavLink>
+					<NavLink
+						to='/Phones'
+						activeClassName='active'
+						className='nav-item nav-link'>
 						Phones
-					</a>
+					</NavLink>
 				</div>
 			</div>
 			<CartWidget />
 
 			<button
-				className="navbar-toggler"
-				type="button"
-				data-toggle="collapse"
-				data-target="#navbarNavAltMarkup"
-				aria-controls="navbarNavAltMarkup"
-				aria-expanded="false"
-				aria-label="Toggle navigation"
-			>
-				<span className="navbar-toggler-icon"></span>
+				className='navbar-toggler'
+				type='button'
+				data-toggle='collapse'
+				data-target='#navbarNavAltMarkup'
+				aria-controls='navbarNavAltMarkup'
+				aria-expanded='false'
+				aria-label='Toggle navigation'>
+				<span className='navbar-toggler-icon'></span>
 			</button>
 		</nav>
 	);
