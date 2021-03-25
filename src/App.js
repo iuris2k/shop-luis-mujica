@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar/Navbar";
 import ItemListContainer from "./containers/ItemListContainer";
 import "./App.css";
 
+import ItemDetailContainer from "./containers/ItemDetailContainer";
+
 function App() {
     return ( <
         BrowserRouter >
@@ -23,6 +25,11 @@ function App() {
         Route path = '/Home' >
         <
         ItemListContainer greeting = 'look here our catalog!' / >
+        <
+        /Route>{" "} <
+        Route path = '/Phones' >
+        <
+        ItemDetailContainer / >
         <
         /Route>{" "} <
         /Switch>{" "} <
