@@ -22,7 +22,7 @@ const getItems = () => {
 				title: "Samsung Galaxy S21 Ultra",
 				price: 178000,
 				description: "El mejor celular del año ",
-				img: "../../img/phone.svg",
+				img: "",
 			});
 		}, 2000);
 	});
