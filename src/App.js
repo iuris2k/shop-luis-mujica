@@ -8,34 +8,24 @@ import "./App.css";
 import ItemDetailContainer from "./containers/ItemDetailContainer";
 
 function App() {
-    return ( <
-        BrowserRouter >
-        <
-        div className = 'App' >
-        <
-        Navbar / >
-        <
-        Switch >
-        <
-        Route exact path = '/' >
-        <
-        ItemListContainer / >
-        <
-        /Route>{" "} <
-        Route path = '/Home' >
-        <
-        ItemListContainer greeting = 'look here our catalog!' / >
-        <
-        /Route>{" "} <
-        Route path = '/Phones' >
-        <
-        ItemDetailContainer / >
-        <
-        /Route>{" "} <
-        /Switch>{" "} <
-        /div>{" "} <
-        /BrowserRouter>
-    );
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <ItemListContainer />
+          </Route>
+          <Route path="/Home">
+            <ItemListContainer greeting="look here our catalog!" />
+          </Route>
+          <Route path="/Phones">
+            <ItemDetailContainer />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
