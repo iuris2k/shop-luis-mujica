@@ -22,6 +22,7 @@ function App() {
           <Route path="/Phones">
             <ItemDetailContainer />
           </Route>
+          <Route path="*">404</Route>
         </Switch>
       </BrowserRouter>
     </div>

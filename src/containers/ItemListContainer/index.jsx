@@ -6,54 +6,57 @@ import productList from "../../mocks/productList";
 import "./loading.css";
 
 const ItemListContainer = (props) => {
-	const [contador, setContador] = useState(1);
+  const [contador, setContador] = useState(1);
 
-	const onAdd = (stock) => {
-		console.log(stock);
-		if (contador < stock) {
-			setContador(contador + 1);
-		} else {
-			alert("No tenemos mas stock!!!");
-		}
-	};
+  const onAdd = (stock) => {
+    console.log(stock);
+    if (contador < stock) {
+      setContador(contador + 1);
+    } else {
+      alert("No tenemos mas stock!!!");
+    }
+  };
 
-	const onSubstract = (stock) => {
-		if (contador > 1) {
-			setContador(contador - 1);
-		} else {
-			alert("El valor es menor a lo que podemos vender");
-		}
-	};
+  const onSubstract = (stock) => {
+    if (contador > 1) {
+      setContador(contador - 1);
+    } else {
+      alert("El valor es menor a lo que podemos vender");
+    }
+  };
 
-	const [products, setProducts] = React.useState([]);
-	const [isLoading, setIsLoading] = React.useState(false);
+  const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-	useEffect(() => {
-		setIsLoading(true);
-		const myPromise = new Promise((resolve, reject) => {
-			setTimeout(() => resolve(productList), 2000);
-		});
+  useEffect(() => {
+    setIsLoading(true);
 
-		myPromise.then((result) => {
-			setProducts(result);
-			setIsLoading(false);
-		});
-	}, []);
+    const myPromise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(productList);
+      }, 2000);
+    });
 
-	if (isLoading) {
-		return <h2 className="loading">Cargando productos...</h2>;
-	}
+    myPromise.then((result) => {
+      setProducts(result);
+      setIsLoading(false);
+    });
+  }, []);
 
-	return (
-		<>
-			<ItemList products={products} />
-			<ItemCount
-				stock={5}
-				contador={contador}
-				onSubstract={onSubstract}
-				onAdd={onAdd}
-			/>
-		</>
-	);
+  if (isLoading) {
+    return <h2 className="loading">Cargando productos...</h2>;
+  }
+
+  return (
+    <>
+      <ItemList products={products} />
+      <ItemCount
+        stock={5}
+        contador={contador}
+        onSubstract={onSubstract}
+        onAdd={onAdd}
+      />
+    </>
+  );
 };
 export default ItemListContainer;
