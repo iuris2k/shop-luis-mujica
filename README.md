@@ -20,8 +20,8 @@ Este proyecto fue creado con la idea de ser un E-commerce de artículos electró
 
 Tenemos 3 productos en el inventario con un stock de 5 elementos por cada uno.
 La idea es clasificar las categorías:
-- Computers
-- Phones
+- `Computers`
+- `Phones`
 
 En Computers tenemos 2 productos, una PC de escritorio y una Notebook.
 En Phones tenemos un único producto.
