@@ -9,6 +9,7 @@ const getItems = () => {
     setTimeout(() => {
       resolve({
         title: "Samsung Galaxy S21 Ultra",
+        category: "Phones",
         price: 178000,
         description: "El mejor celular del año ",
         img: "",

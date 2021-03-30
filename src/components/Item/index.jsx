@@ -1,8 +1,6 @@
 import React from "react";
 import "./card.css";
 
-//import {Link} from "react-router-dom";
-
 const Item = ({ product }) => {
   return (
     <div className="card text-center bg-dark animate__animated animate__fadeInUp col-md-4 mt-2 p-2 w-100">

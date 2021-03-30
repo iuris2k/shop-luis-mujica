@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import ItemListContainer from "./containers/ItemListContainer";
 import "./App.css";
+import Footer from "./components/Footer";
 
 import ItemDetailContainer from "./containers/ItemDetailContainer";
 
@@ -24,6 +25,7 @@ function App() {
           </Route>
           <Route path="*">404</Route>
         </Switch>
+        <Footer />
       </BrowserRouter>
     </div>
   );
