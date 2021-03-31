@@ -2,7 +2,7 @@ import React from "react";
 import Item from "../Item";
 import "./styles.css";
 
-const ItemList = ({ products }) => {
+const ItemList = ({ products = [] }) => {
   return (
     <div className="container-fluid d-flex justify-content-center align-items-center">
       <div className="row w-100">

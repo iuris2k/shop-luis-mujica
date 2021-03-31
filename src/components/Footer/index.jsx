@@ -2,6 +2,7 @@
  * Copyright (c) 2021. All rights reserved.
  */
 import React from "react";
+//import "./footer.css"
 /* Footer Bottom */
 
 function Footer() {

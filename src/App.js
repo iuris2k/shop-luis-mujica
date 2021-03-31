@@ -23,7 +23,7 @@ function App() {
           <Route path="/Phones">
             <ItemDetailContainer />
           </Route>
-          <Route path="*">404</Route>
+          <Route path="*" children={<div>Not found</div>} />
         </Switch>
         <Footer />
       </BrowserRouter>

@@ -1,3 +1,3 @@
 export const connectWithDataBase = () => {
-    return "algo";
+  return "algo";
 };

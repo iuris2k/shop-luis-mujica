@@ -1,7 +1,6 @@
 // simular el tomar un producto a través de una API
 
 import React, { useEffect, useState } from "react";
-
 import ItemDetail from "../../components/ItemDetail";
 
 const getItems = () => {
