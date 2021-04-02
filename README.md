@@ -18,14 +18,12 @@ You will also see any lint errors in the console.
 
 Este proyecto fue creado con la idea de ser un E-commerce de artículos electrónicos.
 
-Tenemos 3 productos en el inventario con un stock de 5 elementos por cada uno.
+Tenemos 6 productos en el inventario con un stock de 5 elementos por cada uno.
 La idea es clasificar las categorías:
 
 - `Computers`
 - `Phones`
-
-En Computers tenemos 2 productos, una PC de escritorio y una Notebook.
-En Phones tenemos un único producto.
+- `Etc.`
 
 Además vamos a elegir cada producto para ver sus detalles.
 
