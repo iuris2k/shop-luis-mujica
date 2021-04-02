@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-  height: 100vh;
+body {
   background: rgb(238, 69, 64);
   background: linear-gradient(
     180deg,
@@ -10,6 +8,14 @@
     rgba(81, 10, 50, 1) 45%,
     rgba(45, 20, 44, 1) 100%
   );
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 100vh;
+}
+
+.App {
+  padding-top: 80px;
+  text-align: center;
 }
 
 .App-logo {

@@ -1,29 +1,33 @@
 // simular el tomar un producto a través de una API
 
-import React, { useEffect, useState } from "react";
-import ItemDetail from "../../components/ItemDetail";
+import React, { useEffect, useState } from 'react'
+import ItemDetail from '../../components/ItemDetail'
+import { getProduct } from '../../mocks/productService'
+import { useParams } from 'react-router-dom'
 
-const getItems = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve({
-        title: "Samsung Galaxy S21 Ultra",
-        category: "Phones",
-        price: 178000,
-        description: "El mejor celular del año ",
-        img: "",
-      });
-    }, 2000);
-  });
-};
-
-export default function ItemDetailContainer() {
-  const [item, setItem] = useState(null);
+export default function ItemDetailContainer () {
+  const [isLoading, setIsLoading] = useState(false)
+  const [item, setItem] = useState(null)
+  const { itemId } = useParams()
 
   useEffect(() => {
-    getItems().then((res) => setItem(res));
-    return;
-  }, []);
+    setIsLoading(true)
 
-  return <ItemDetail item={item} />;
+    const myPromise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(getProduct(itemId))
+      }, 2000)
+    })
+
+    myPromise.then((result) => {
+      setItem(result)
+      setIsLoading(false)
+    })
+  }, [itemId])
+
+  if (isLoading) {
+    return <h2 className="loading">Cargando producto...</h2>
+  }
+
+  return <ItemDetail item={item} />
 }

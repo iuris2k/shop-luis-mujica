@@ -1,62 +1,35 @@
-import React, { useEffect, useState } from "react";
-import "../../App.css";
-import { ItemCount } from "../../components/ItemCount";
-import ItemList from "../../components/ItemList";
-import productList from "../../mocks/productList";
-import "./loading.css";
+import React, { useEffect, useState } from 'react'
+import '../../App.css'
+import ItemList from '../../components/ItemList'
+import { getProducts } from '../../mocks/productService'
+import { useParams } from 'react-router-dom'
+import './loading.css'
 
-const ItemListContainer = (props) => {
-  const [contador, setContador] = useState(1);
+const ItemListContainer = () => {
+  const { categoryId } = useParams()
 
-  const onAdd = (stock) => {
-    console.log(stock);
-    if (contador < stock) {
-      setContador(contador + 1);
-    } else {
-      alert("No tenemos mas stock!!!");
-    }
-  };
-
-  const onSubstract = (stock) => {
-    if (contador > 1) {
-      setContador(contador - 1);
-    } else {
-      alert("El valor es menor a lo que podemos vender");
-    }
-  };
-
-  const [products, setProducts] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [products, setProducts] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
-    setIsLoading(true);
+    setIsLoading(true)
 
     const myPromise = new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(productList);
-      }, 2000);
-    });
+        resolve(getProducts(categoryId))
+      }, 2000)
+    })
 
     myPromise.then((result) => {
-      setProducts(result);
-      setIsLoading(false);
-    });
-  }, []);
+      setProducts(result)
+      setIsLoading(false)
+    })
+  }, [categoryId])
 
   if (isLoading) {
-    return <h2 className="loading">Cargando productos...</h2>;
+    return <h2 className="loading">Cargando productos...</h2>
   }
 
-  return (
-    <>
-      <ItemList products={products} />
-      <ItemCount
-        stock={5}
-        contador={contador}
-        onSubstract={onSubstract}
-        onAdd={onAdd}
-      />
-    </>
-  );
-};
-export default ItemListContainer;
+  return <ItemList products={products} />
+}
+export default ItemListContainer
