@@ -47,3 +47,4 @@ export function AddToCart({ product }) {
 		</div>
 	);
 }
+	//<div className='price text-success'></div>
