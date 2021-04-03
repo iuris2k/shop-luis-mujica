@@ -21,13 +21,11 @@ export default function ItemDetail({ item }) {
 						<h5 className='card-title'>{item?.name}</h5>
 						{/* <!-- Precios --> */}
 						<h6>Precio en oferta</h6>
-
 							<h5 className='mt-3 text-secondary'>${item?.price}</h5>
 							<h5 className='mt-2 text-secondary'>Cantidad</h5>
 							<AddToCart product={item} />
 							<h5 className='mt-2 text-secondary'>Detalle del producto</h5>
 							<h6 className='mt-2 text-secondary'>{item?.description}</h6>
-
 					</div>
 				</div>
 			</div>
