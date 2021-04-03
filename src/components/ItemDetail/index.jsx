@@ -5,37 +5,29 @@ import "./itemDetail.css";
 
 export default function ItemDetail({ item }) {
 	return (
-		<div className='container card'>
+		<div className='container d-flex justify-content-center align-items-center h-100'>
 			<div className='row'>
-				<div className='col-xs-4 item-photo'>
-					<img style={{ maxWidth: "250px" }} src={item?.pictureUrl} alt='img' />
-				</div>
-				<div className='col-xs-5' style={{ border: "0px solid gray" }}>
-					{/* <!-- Datos del vendedor y titulo del producto --> */}
-					<h3>{item?.name}</h3>
-
-					{/* <!-- Precios --> */}
-					<h6 className='title-price'>
-						<small>PRECIO OFERTA</small>
-					</h6>
-					<h3 style={{ marginTop: "0px" }}>${item?.price}</h3>
-
-					<div className='section' style={{ paddingBottom: "20px" }}>
-						<h6 className='title-attr'>
-							<small>CANTIDAD</small>
-						</h6>
-						<AddToCart product={item} />
+				<div className='card text-center bg-dark animate__animated animate__fadeInUp mt-2 p-2'>
+					<div className='overflow'>
+						<img
+							src={item?.pictureUrl}
+							alt='img'
+							className='card-img-top'
+							style={{ width: "18rem", maxHeight: "250px" }}
+						/>
 					</div>
-				</div>
-
-				<div className='col-xs-9'>
-					<ul className='menu-items'>
-						<li className='active'>Detalle del producto</li>
-					</ul>
-					<div style={{ width: "100%", borderTop: "1px solid silver" }}>
-						<p style={{ padding: "15px" }}>
-							<small>{item?.description}</small>
-						</p>
+					<div className='card-body text-light'>
+						{/* <!-- Datos del vendedor y titulo del producto --> */}
+						<h5 className='card-title'>{item?.name}</h5>
+						{/* <!-- Precios --> */}
+						<h6>Precio en oferta</h6>
+						<div className='price text-success'>
+							<h5 className='mt-3 text-secondary'>${item?.price}</h5>
+							<h5 className='mt-2 text-secondary'>Cantidad</h5>
+							<AddToCart product={item} />
+							<h5 className='mt-2 text-secondary'>Detalle del producto</h5>
+							<h6 className='mt-2 text-secondary'>{item?.description}</h6>
+						</div>
 					</div>
 				</div>
 			</div>
