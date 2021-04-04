@@ -7,8 +7,8 @@ import React from 'react'
 
 function Footer () {
   return (
-    <div className="footer-bottom">
-      <p className="text-xs-center text-light">
+    <div className='footer-bottom'>
+      <p className='text-xs-center text-light'>
         &copy;{new Date().getFullYear()} By LM - All rights reserved
       </p>
     </div>

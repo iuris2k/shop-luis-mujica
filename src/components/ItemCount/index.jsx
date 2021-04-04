@@ -1,48 +1,47 @@
-import { useState, useEffect } from "react";
-import "./style.css";
+import React, { useState, useEffect } from 'react'
+import './style.css'
 
+// eslint-disable-next-line react/prop-types
 export const ItemCount = ({ stock, value, onChange }) => {
-  const [contador, setContador] = useState(value);
+  const [contador, setContador] = useState(value)
 
   const onAdd = () => {
     if (contador < stock) {
-      setContador(contador + 1);
+      setContador(contador + 1)
     } else {
-      alert("No tenemos mas stock!!!");
+      alert('No tenemos mas stock!!!')
     }
-  };
+  }
 
-  const onSubstract = (stock) => {
+  const onSubstract = () => {
     if (contador > 1) {
-      setContador(contador - 1);
+      setContador(contador - 1)
     } else {
-      alert("El valor es menor a lo que podemos vender");
+      alert('El valor es menor a lo que podemos vender')
     }
-  };
+  }
 
   useEffect(() => {
-    onChange(contador);
-  }, [contador, onChange]);
+    onChange(contador)
+  }, [contador, onChange])
 
   return (
     <>
       <button
-        className="btn btn-primary"
+        className='btn btn-primary'
         onClick={onSubstract}
-        disabled={contador === 1}
-      >
+        disabled={contador === 1}>
         -
       </button>
-      <b className="contador">{contador}</b>
+      <b className='contador'>{contador}</b>
       <button
-        className="btn btn-primary"
+        className='btn btn-primary'
         onClick={() => {
-          onAdd();
+          onAdd()
         }}
-        disabled={contador === stock}
-      >
+        disabled={contador === stock}>
         +
       </button>
     </>
-  );
-};
+  )
+}

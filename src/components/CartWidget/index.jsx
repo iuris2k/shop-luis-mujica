@@ -3,8 +3,8 @@ const CartWidget = () => {
   return (
     <img
       style={{ width: '30px' }}
-      src="/images/shopping-cart-solid.svg"
-      alt=""
+      src='/images/shopping-cart-solid.svg'
+      alt=''
     />
   )
 }

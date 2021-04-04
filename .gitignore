@@ -24,3 +24,5 @@ yarn-error.log*
 
 src/mocks/productList.jsx
 .idea
+src/components/MaterialUI
+*.jsx

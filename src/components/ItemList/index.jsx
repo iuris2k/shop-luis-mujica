@@ -3,6 +3,7 @@ import Item from '../Item'
 import './styles.css'
 import { NavLink } from 'react-router-dom'
 
+// eslint-disable-next-line react/prop-types
 const ItemList = ({ products = [] }) => {
   return (
     <div className="container-fluid d-flex justify-content-center align-items-center">
