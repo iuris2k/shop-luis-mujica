@@ -3,5 +3,9 @@
   "editor.fontFamily": "JetBrains Mono",
   "editor.tabSize": 2,
   "editor.renderWhitespace": "all",
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "prettier.withNodeModules": true,
+  "prettier.singleQuote": true,
+  "prettier.jsxBracketSameLine": true,
+  "prettier.jsxSingleQuote": true
 }
