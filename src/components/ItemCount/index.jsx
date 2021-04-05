@@ -1,3 +1,5 @@
+/* eslint-disable no-alert */
+/* eslint-disable import/prefer-default-export */
 import React, { useState, useEffect } from 'react'
 import './style.css'
 
@@ -27,14 +29,14 @@ export const ItemCount = ({ stock, value, onChange }) => {
 
   return (
     <>
-      <button
+      <button type="button"
         className='btn btn-primary'
         onClick={onSubstract}
         disabled={contador === 1}>
         -
       </button>
       <b className='contador'>{contador}</b>
-      <button
+      <button type="button"
         className='btn btn-primary'
         onClick={() => {
           onAdd()

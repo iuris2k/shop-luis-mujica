@@ -1,9 +1,9 @@
 // simular el tomar un producto a través de una API
 
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import ItemDetail from '../../components/ItemDetail'
 import { getProduct } from '../../mocks/productService'
-import { useParams } from 'react-router-dom'
 
 export default function ItemDetailContainer () {
   const [isLoading, setIsLoading] = useState(false)
@@ -13,7 +13,7 @@ export default function ItemDetailContainer () {
   useEffect(() => {
     setIsLoading(true)
 
-    const myPromise = new Promise((resolve, reject) => {
+    const myPromise = new Promise((resolve) => {
       setTimeout(() => {
         resolve(getProduct(itemId))
       }, 2000)

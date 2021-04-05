@@ -4,5 +4,6 @@
     "jsxSingleQuote": true,
     "trailingComma": "all",
     "bracketSpacing": false,
-    "proseWrap": "always"
+    "proseWrap": "always",
+    "parser": "babel"
 }

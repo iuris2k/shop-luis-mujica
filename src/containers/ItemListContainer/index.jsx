@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import '../../App.css'
+import { useParams } from 'react-router-dom'
 import ItemList from '../../components/ItemList'
 import { getProducts } from '../../mocks/productService'
-import { useParams } from 'react-router-dom'
 import './loading.css'
 
 const ItemListContainer = () => {
@@ -14,7 +14,7 @@ const ItemListContainer = () => {
   useEffect(() => {
     setIsLoading(true)
 
-    const myPromise = new Promise((resolve, reject) => {
+    const myPromise = new Promise((resolve) => {
       setTimeout(() => {
         resolve(getProducts(categoryId))
       }, 2000)

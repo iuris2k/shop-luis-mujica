@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 /* eslint-disable react/prop-types */
 /*
  * Copyright (c) 2021.  By LM - All rights reserved.
@@ -30,7 +31,7 @@ export function AddToCart ({ product }) {
       {!isAdded && (
         <div className='card text-center bg-dark animate__animated animate__fadeInUp mt-2 p-2'>
           <div className='overflow'>
-            <button className='btn btn-success' onClick={addToCart}>
+            <button type='button' className='btn btn-success' onClick={addToCart}>
               Agregar al carrito
             </button>
           </div>
@@ -40,7 +41,7 @@ export function AddToCart ({ product }) {
         <div className='card text-center bg-dark animate__animated animate__fadeInUp mt-2 p-2'>
           <div className='overflow'>
             <NavLink to='/cart' className='navbar-brand'>
-              <button className='btn btn-success'>Terminar mi compra</button>
+              <button type='button' className='btn btn-success'>Terminar mi compra</button>
             </NavLink>
           </div>
         </div>
