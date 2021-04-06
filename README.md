@@ -1,34 +1,53 @@
-# Getting Started with My Project on React App
+<h1 align="center">Welcome to shop-luis-mujica 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> E-commerce
 
-## Available Scripts
+## Install
 
-In the project directory, you can run:
+```sh
+npm install
+```
 
-### `npm start`
+## Usage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```sh
+npm run start
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Run tests
 
-## Mi Proyecto
+```sh
+npm run test
+```
+## My Project
 
-Este proyecto fue creado con la idea de ser un E-commerce de artículos electrónicos.
+This project was created with the idea of being an E-commerce for electronic items.
 
-Tenemos 6 productos en el inventario con un stock de 5 elementos por cada uno.
-La idea es clasificar las categorías:
+We have 6 products in inventory with a stock of 5 items each.
+
+The idea is to classify the categories:
 
 - `Computers`
 - `Phones`
 - `Etc.`
 
-Además vamos a elegir cada producto para ver sus detalles.
+We will also choose each product to see its details.
 
-Finalmente subiremos nuestra compra al carrito.
+Finally we will upload our purchase to the cart.
 
-## License
+## Author
 
+👤 **Luis Mujica**
+
+* Website: Luis Mujica
+* Github: [@iuris2k](https://github.com/iuris2k)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+***
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
