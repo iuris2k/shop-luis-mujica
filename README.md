@@ -1,9 +1,9 @@
-<h1 align="center">Welcome to shop-luis-mujica 👋</h1>
+<h1 align="center">Welcome to Iuris-Tech 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> E-commerce
+> Technology e-commerce
 
 ## Install
 
@@ -37,7 +37,7 @@ The idea is to classify the categories:
 
 We will also choose each product to see its details.
 
-Finally we will upload our purchase to the cart.
+Finally, we will upload our purchase to the cart.
 
 ## Author
 
