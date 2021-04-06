@@ -8,6 +8,3 @@ export default function useCategories() {
   }, [])
   return { categories }
 }
-
-// Test Git
-// Test Git2
