@@ -43,8 +43,8 @@ Finally, we will upload our purchase to the cart.
 
 👤 **Luis Mujica**
 
-* Website: Luis Mujica
 * Github: [@iuris2k](https://github.com/iuris2k)
+* LinkedIn: [@luismujica](https://linkedin.com/in/luis-mujica)
 
 ## Show your support
 
