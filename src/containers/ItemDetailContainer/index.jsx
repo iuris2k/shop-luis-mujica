@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { LinearProgress } from '@material-ui/core'
 import ItemDetail from '../../components/ItemDetail'
 import { getProduct } from '../../mocks/productService'
 
@@ -26,7 +27,15 @@ export default function ItemDetailContainer () {
   }, [itemId])
 
   if (isLoading) {
-    return <h2 className="loading">Cargando producto...</h2>
+    return (
+      <div>
+        <h2 className="loading">Cargando producto...</h2>
+        <br/>
+        <LinearProgress />
+        <br/>
+        <LinearProgress color="secondary" />
+      </div>
+    )
   }
 
   return <ItemDetail item={item} />
