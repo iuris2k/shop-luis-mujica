@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../../App.css'
 import { useParams } from 'react-router-dom'
+import { LinearProgress } from '@material-ui/core'
 import ItemList from '../../components/ItemList'
 import { getProducts } from '../../mocks/productService'
 import './loading.css'
@@ -27,7 +28,15 @@ const ItemListContainer = () => {
   }, [categoryId])
 
   if (isLoading) {
-    return <h2 className="loading">Cargando productos...</h2>
+    return (
+      <div>
+        <h2 className="loading">Cargando productos...</h2>
+        <br/>
+        <LinearProgress />
+        <br/>
+        <LinearProgress color="secondary" />
+      </div>
+    )
   }
 
   return <ItemList products={products} />
