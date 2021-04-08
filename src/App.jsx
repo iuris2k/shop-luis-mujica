@@ -4,11 +4,11 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 import ItemListContainer from './containers/ItemListContainer'
-import './App.css'
 import Footer from './components/Footer'
 
 import ItemDetailContainer from './containers/ItemDetailContainer'
 import CartContainer from './containers/CartContainer'
+import './App.css'
 
 // eslint import moduleName from 'module'
 

@@ -1,6 +1,6 @@
 // simular el tomar un producto a través de una API
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Fragment } from 'react'
 import { useParams } from 'react-router-dom'
 import { LinearProgress } from '@material-ui/core'
 import ItemDetail from '../../components/ItemDetail'
@@ -28,13 +28,13 @@ export default function ItemDetailContainer () {
 
   if (isLoading) {
     return (
-      <div>
+      <>
         <h2 className="loading">Cargando producto...</h2>
         <br/>
         <LinearProgress />
         <br/>
         <LinearProgress color="secondary" />
-      </div>
+      </>
     )
   }
 

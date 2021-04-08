@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Fragment } from 'react'
 import '../../App.css'
 import { useParams } from 'react-router-dom'
 import { LinearProgress } from '@material-ui/core'
@@ -29,13 +29,13 @@ const ItemListContainer = () => {
 
   if (isLoading) {
     return (
-      <div>
+      <>
         <h2 className="loading">Cargando productos...</h2>
         <br/>
         <LinearProgress />
         <br/>
         <LinearProgress color="secondary" />
-      </div>
+      </>
     )
   }
 
