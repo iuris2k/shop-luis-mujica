@@ -2,7 +2,6 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-
 import Navbar from './components/Navbar/Navbar'
 import ItemListContainer from './containers/ItemListContainer'
 import './App.css'

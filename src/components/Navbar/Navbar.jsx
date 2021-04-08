@@ -7,7 +7,7 @@ import useCategories from '../../hooks/useCategories'
 const Navbar = () => {
   const { categories } = useCategories()
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <NavLink to="/" activeClassName="active" className="navbar-brand">
         Iuris-Tech
       </NavLink>
