@@ -1,9 +1,9 @@
 import React, { useEffect, useState, Fragment } from 'react'
-import '../../App.css'
 import { useParams } from 'react-router-dom'
 import { LinearProgress } from '@material-ui/core'
 import ItemList from '../../components/ItemList'
 import { getProducts } from '../../mocks/productService'
+import '../../App.css'
 import './loading.css'
 
 const ItemListContainer = () => {
