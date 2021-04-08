@@ -36,8 +36,8 @@ export function AddToCart({product}) {
           <div className='overflow'>
             {/* <Button variant='contained' color='primary' onClick={addToCart}> */}
             <Button
-              variant="contained"
-              color="primary"
+              variant='contained'
+              color='primary'
               endIcon={<Icon>send</Icon>}
               onClick={addToCart}
             >
@@ -51,9 +51,9 @@ export function AddToCart({product}) {
           <div className='overflow'>
             <NavLink to='/cart' className='navbar-brand'>
               <Button
-                variant="contained"
-                color="primary"
-                size="small"
+                variant='contained'
+                color='primary'
+                size='small'
                 endIcon={<SaveIcon />}
               >
                 Terminar mi compra
