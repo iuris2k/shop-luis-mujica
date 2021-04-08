@@ -1,6 +1,7 @@
 import React, { useEffect, useState, Fragment } from 'react'
 import { useParams } from 'react-router-dom'
-import { LinearProgress } from '@material-ui/core'
+// import { LinearProgress } from '@material-ui/core'
+import LinearIndeterminate from '../../components/MaterialUI/LinearIndeterminate'
 import ItemList from '../../components/ItemList'
 import { getProducts } from '../../mocks/productService'
 import '../../App.css'
@@ -32,9 +33,7 @@ const ItemListContainer = () => {
       <>
         <h2 className="loading">Cargando productos...</h2>
         <br/>
-        <LinearProgress />
-        <br/>
-        <LinearProgress color="secondary" />
+        <LinearIndeterminate />
       </>
     )
   }
