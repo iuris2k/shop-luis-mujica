@@ -24,9 +24,6 @@ Finally, we will upload our purchase to the cart.
 
 ### ✨ [Demo](https://iuristech.netlify.app/)
 
-![Alt tag]
-(src/img/Iuris-Tech.png)
-
 ## Install
 
 ```sh
