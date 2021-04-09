@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> This project was created with the idea of being an E-commerce for electronic items.
+This project was created with the idea of being an E-commerce for electronic items.
 
 We have 6 products in inventory with a stock of 5 items each.
 
@@ -23,6 +23,9 @@ Finally, we will upload our purchase to the cart.
 ### 🏠 [Homepage](https://iuristech.netlify.app/)
 
 ### ✨ [Demo](https://iuristech.netlify.app/)
+
+![Cover page]
+(https://github.com/iuris2k/shop-luis-mujica/master/src/img/Iuris-Tech.png?raw=true)
 
 ## Install
 
