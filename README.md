@@ -25,7 +25,7 @@ Finally, we will upload our purchase to the cart.
 ### ✨ [Demo](https://iuristech.netlify.app/)
 
 ![Cover page]
-(https://github.com/iuris2k/shop-luis-mujica/master/src/img/Iuris-Tech.png?raw=true)
+(https://github.com/iuris2k/shop-luis-mujica/src/img/Iuris-Tech.png?raw=true)
 
 ## Install
 
