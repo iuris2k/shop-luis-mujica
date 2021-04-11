@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState, useMemo } from 'react'
 
 export const cartContext = createContext({})
 
@@ -7,11 +7,11 @@ export function CartProvider = ({ defaultValue = [], children }) {
     const [cart, setCart] = useState(defaultValue) // este es el carrito q podemos manejar desde cualquier componente
 
     const cartLength = () => {
-        return cart.reduce((accumlator, currentValue) => { return accumlator + currentValue.cant }, 0)
+        return cart.reduce((accumulator, currentValue) => { return accumulator + currentValue.cant }, 0)
     }
 
     const cartPrice = () => {
-        return cart.reduce((accumlator, currentValue) => { return accumlator + currentValue.cant * }, 0)
+        return cart.reduce((accumulator, currentValue) => { return accumulator + currentValue.cant * }, 0)
     }
 
     const addToCart = (newProduct, quantity) => {
