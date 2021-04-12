@@ -1,6 +1,7 @@
 /* eslint-disable no-alert */
 /* eslint-disable import/prefer-default-export */
 import React, { useState, useEffect } from 'react'
+import Button from '@material-ui/core/Button'
 import './style.css'
 
 // eslint-disable-next-line react/prop-types
@@ -29,21 +30,22 @@ export const ItemCount = ({ stock, value, onChange }) => {
 
   return (
     <>
-      <button type="button"
-        className='btn btn-primary'
+      <Button
+        variant="contained"
+        color="primary"
         onClick={onSubstract}
         disabled={contador === 1}>
         -
-      </button>
+      </Button>
       <b className='contador'>{contador}</b>
-      <button type="button"
-        className='btn btn-primary'
+      <Button
+        variant="contained" color="primary"
         onClick={() => {
           onAdd()
         }}
         disabled={contador === stock}>
         +
-      </button>
+      </Button>
     </>
   )
 }
