@@ -9,15 +9,12 @@ import {NavLink} from 'react-router-dom'
 import {Button} from '@material-ui/core'
 import Icon from '@material-ui/core/Icon'
 import SaveIcon from '@material-ui/icons/Save'
-
 import {ItemCount} from '../ItemCount'
-// import {CartContext} from '../../context/CartContext'
 import '../Item/card.css'
 
 export function AddToCart({product}) {
   const [contador, setContador] = useState(1)
   const [isAdded, setIsAdded] = useState(false)
-
   function addToCart() {
     setIsAdded(true)
     // alert("Agregamos " + contador + " " + product.name + " al carrito");
@@ -37,6 +34,7 @@ export function AddToCart({product}) {
       {!isAdded && (
         <div className='card text-center bg-dark animate__animated animate__fadeInUp mt-2 p-2'>
           <div className='overflow'>
+            {/* <Button variant='contained' color='primary' onClick={addToCart}> */}
             <Button
               variant='contained'
               color='primary'
@@ -55,7 +53,7 @@ export function AddToCart({product}) {
               <Button
                 variant='contained'
                 color='primary'
-                // size='small'
+                size='small'
                 endIcon={<SaveIcon />}
               >
                 Terminar mi compra

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { AddToCart } from "../AddToCart/index"
-// import {Link} from "react-router-dom";
+
 import './itemDetail.css'
 
 export default function ItemDetail ({ item }) {
