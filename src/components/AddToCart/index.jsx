@@ -24,7 +24,7 @@ export function AddToCart({product}) {
   const {addItem, cart} = useCart()
 
   function addToCart () {
-    console.log('se agrega un item', counter)
+
     addItem(product, counter)
     setIsAdded(true)
     // alert("Agregamos " + contador + " " + product.name + " al carrito");
