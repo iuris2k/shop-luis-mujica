@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable react/prop-types */
 /*
@@ -12,34 +13,32 @@ import SaveIcon from '@material-ui/icons/Save'
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
 
 import {ItemCount} from '../ItemCount'
-import { CartContext } from '../../context/CartContext'
+import { CartProvider, useCart } from '../../context/CartContext'
 import '../Item/card.css'
 // import { useCart } from '../../context/CartContext'
 
 export function AddToCart({product}) {
-  const [contador, setContador] = useState(1)
+  const [counter, setCounter] = useState(1)
   const [isAdded, setIsAdded] = useState(false)
 
-  const {addItem} = useContext(CartContext)
-
-  // const cart = useCart()
+  const {addItem, cart} = useCart()
 
   function addToCart () {
-    addItem(product, contador)
+    console.log('se agrega un item', counter)
+    addItem(product, counter)
     setIsAdded(true)
-    // console.log(cart)
     // alert("Agregamos " + contador + " " + product.name + " al carrito");
   }
 
   function counterChangeHandler(val) {
-    setContador(val)
+    setCounter(val)
   }
 
   return (
     <div>
       <ItemCount
         stock={product?.stock || 0}
-        value={contador}
+        value={counter}
         onChange={counterChangeHandler}
       />
       {!isAdded && (
