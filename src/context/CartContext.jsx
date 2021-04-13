@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
+import PropTypes from 'prop-types'
 
 export const CartContext = React.createContext([])
 
@@ -8,6 +9,7 @@ export const CartProvider = ({children}) => {
   const addItem = (newItem, newQuantity) => {
     const {item = null, quantity = 0} =
       cart.find((e) => e.item.id === newItem.id) || {}
+    console.log(item)
 
     const newCart = cart.filter((e) => e.item.id !== newItem.id)
 
@@ -34,4 +36,16 @@ export const CartProvider = ({children}) => {
       {children}
     </CartContext.Provider>
   )
+}
+
+CartProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
+export function useCart() {
+  const context = useContext( CartContext )
+  if ( !context ) {
+    throw new Error('useCart debe estar dentro de CartContext')
+  }
+  return context
 }

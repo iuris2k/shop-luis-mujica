@@ -4,7 +4,7 @@
  * Copyright (c) 2021.  By LM - All rights reserved.
  */
 
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import {NavLink} from 'react-router-dom'
 import {Button} from '@material-ui/core'
 // import Icon from '@material-ui/core/Icon'
@@ -12,15 +12,22 @@ import SaveIcon from '@material-ui/icons/Save'
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
 
 import {ItemCount} from '../ItemCount'
-// import CartContext from '../../context/CartContext'
+import { CartContext } from '../../context/CartContext'
 import '../Item/card.css'
+// import { useCart } from '../../context/CartContext'
 
 export function AddToCart({product}) {
   const [contador, setContador] = useState(1)
   const [isAdded, setIsAdded] = useState(false)
 
-  function addToCart() {
+  const {addItem} = useContext(CartContext)
+
+  // const cart = useCart()
+
+  function addToCart () {
+    addItem(product, contador)
     setIsAdded(true)
+    // console.log(cart)
     // alert("Agregamos " + contador + " " + product.name + " al carrito");
   }
 
@@ -41,7 +48,7 @@ export function AddToCart({product}) {
             <Button
               variant='contained'
               color='primary'
-              endIcon={<AddShoppingCartIcon/>}
+              endIcon={<AddShoppingCartIcon />}
               onClick={addToCart}
             >
               Agregar al carrito

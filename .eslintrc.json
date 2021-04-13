@@ -19,7 +19,7 @@
       "extensions": [ ".js", ".jsx" ]
     } ],
     "strict": 0,
-    "indent": [ "error", 2 ],
+    "indent": [ "warn", 2 ],
     "semi": [ "error", "never" ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn" // <--- THIS IS THE NEW RULE
