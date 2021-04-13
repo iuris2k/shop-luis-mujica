@@ -7,11 +7,12 @@
 import React, {useState} from 'react'
 import {NavLink} from 'react-router-dom'
 import {Button} from '@material-ui/core'
-import Icon from '@material-ui/core/Icon'
+// import Icon from '@material-ui/core/Icon'
 import SaveIcon from '@material-ui/icons/Save'
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
 
 import {ItemCount} from '../ItemCount'
-// import {CartContext} from '../../context/CartContext'
+// import CartContext from '../../context/CartContext'
 import '../Item/card.css'
 
 export function AddToCart({product}) {
@@ -40,7 +41,7 @@ export function AddToCart({product}) {
             <Button
               variant='contained'
               color='primary'
-              endIcon={<Icon>send</Icon>}
+              endIcon={<AddShoppingCartIcon/>}
               onClick={addToCart}
             >
               Agregar al carrito
@@ -55,7 +56,6 @@ export function AddToCart({product}) {
               <Button
                 variant='contained'
                 color='primary'
-                // size='small'
                 endIcon={<SaveIcon />}
               >
                 Terminar mi compra

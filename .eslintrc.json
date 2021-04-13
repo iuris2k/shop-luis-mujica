@@ -3,7 +3,7 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+  "extends": [ "plugin:react/recommended", "airbnb", "prettier" ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -13,11 +13,15 @@
   },
   // añade la opción "parser" con "babel-eslint"
   "parser": "babel-eslint",
-  "plugins": ["react", "prettier"],
+  "plugins": [ "react", "prettier", "react-hooks" ],
   "rules": {
-    "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
+    "react/jsx-filename-extension": [ 1, {
+      "extensions": [ ".js", ".jsx" ]
+    } ],
     "strict": 0,
-    "indent": ["error", 2],
-    "semi": ["error", "never"]
+    "indent": [ "error", 2 ],
+    "semi": [ "error", "never" ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn" // <--- THIS IS THE NEW RULE
   }
 }

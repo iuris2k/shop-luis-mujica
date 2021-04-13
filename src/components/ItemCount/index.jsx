@@ -2,7 +2,12 @@
 /* eslint-disable import/prefer-default-export */
 import React, { useState, useEffect } from 'react'
 import Button from '@material-ui/core/Button'
+import RemoveIcon from '@material-ui/icons/Remove'
+import AddIcon from '@material-ui/icons/Add'
+
+
 import './style.css'
+
 
 // eslint-disable-next-line react/prop-types
 export const ItemCount = ({ stock, value, onChange }) => {
@@ -35,7 +40,7 @@ export const ItemCount = ({ stock, value, onChange }) => {
         color="primary"
         onClick={onSubstract}
         disabled={contador === 1}>
-        -
+        <RemoveIcon/>
       </Button>
       <b className='contador'>{contador}</b>
       <Button
@@ -43,8 +48,8 @@ export const ItemCount = ({ stock, value, onChange }) => {
         onClick={() => {
           onAdd()
         }}
-        disabled={contador === stock}>
-        +
+        disabled={ contador === stock }>
+        <AddIcon />
       </Button>
     </>
   )
