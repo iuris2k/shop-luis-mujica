@@ -6,6 +6,7 @@ import RemoveIcon from '@material-ui/icons/Remove'
 import AddIcon from '@material-ui/icons/Add'
 
 
+
 import './style.css'
 
 
@@ -37,7 +38,7 @@ export const ItemCount = ({ stock, value, onChange }) => {
     <>
       <Button
         variant="contained"
-        color="primary"
+        color="secondary"
         onClick={onSubstract}
         disabled={contador === 1}>
         <RemoveIcon/>

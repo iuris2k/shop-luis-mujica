@@ -1,3 +1,4 @@
+/* eslint-disable import/named */
 /* eslint-disable react/no-children-prop */
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react'
@@ -7,10 +8,10 @@ import Navbar from './components/Navbar/Navbar'
 import ItemListContainer from './containers/ItemListContainer'
 import Footer from './components/Footer'
 import ItemDetailContainer from './containers/ItemDetailContainer'
-import CartContainer from './containers/CartContainer'
+// import CartContainer from './containers/CartContainer'
+import { Cart } from './components/Cart/cart'
 import './App.css'
 
-// eslint import moduleName from 'module'
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
               <ItemListContainer />
             </Route>
             <Route exact path='/cart'>
-              <CartContainer />
+              <Cart />
             </Route>
             <Route path='/Category/:categoryId'>
               <ItemListContainer />

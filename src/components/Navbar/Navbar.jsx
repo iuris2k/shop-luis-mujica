@@ -26,8 +26,9 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-      <CartWidget />
-
+      <NavLink to='/cart' className='nav-item nav-link'>
+        <CartWidget /> Mi Carrito
+      </NavLink>
       <button
         className="navbar-toggler"
         type="button"
