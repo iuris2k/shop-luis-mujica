@@ -4,7 +4,7 @@ import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import Button from '@material-ui/core/Button'
 import './cart.css'
-import {useCart} from '../../context/CartContext'
+import { useCart } from '../../context/CartContext'
 
 export const Cart = () => {
   const { cart, removeItem, totalItems, totalPrecio, clear } = useCart()
@@ -29,7 +29,12 @@ export const Cart = () => {
     <div className='cartContainer'>
       {!cart.length ? (
         <h2 className='title'>
-          No hay items en el carrito <Link to='/'>Ir al home</Link>
+          No hay items en el carrito
+          <Link to='/'>
+            <Button variant='contained' color='primary'>
+              Ir a Homepage
+            </Button>
+          </Link>
         </h2>
       ) : (
         <>
@@ -58,7 +63,7 @@ export const Cart = () => {
           </div>
           <div>
             <Button onClick={clear} variant='contained' color='primary'>
-              Confirmar compra
+                  Confirmar compra
             </Button>
           </div>
         </>

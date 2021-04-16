@@ -11,7 +11,7 @@ import ItemDetailContainer from './containers/ItemDetailContainer'
 // import CartContainer from './containers/CartContainer'
 import { Cart } from './components/Cart/cart'
 import './App.css'
-
+import Demo from './HeroSection'
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
           <Navbar />
           <Switch>
             <Route exact path='/'>
+              <Demo />
               <ItemListContainer />
             </Route>
             <Route exact path='/cart'>
