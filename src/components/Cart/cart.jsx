@@ -7,7 +7,23 @@ import './cart.css'
 import {useCart} from '../../context/CartContext'
 
 export const Cart = () => {
-  const {cart, removeItem, totalItems, totalPrecio, clear} = useCart()
+  const { cart, removeItem, totalItems, totalPrecio, clear } = useCart()
+
+  const generarOrden = () => {
+    const order = {}
+
+    order.buyer = { name: "Juan", phone: "tel", email: "tel@gmail.com" }
+    order.total = totalPrecio
+    order.items = cart.map( cartItem => {
+      const {id} = cartItem.item
+      const title = cartItem.item.name
+      const price = cartItem.item.price * cartItem.quantity
+
+      return { id, title, price }
+    } )
+    console.log(order)
+  }
+
 
   return (
     <div className='cartContainer'>
@@ -38,6 +54,11 @@ export const Cart = () => {
             </p>
             <Button onClick={clear} variant='contained' color='secondary'>
               Eliminar todos los items
+            </Button>
+          </div>
+          <div>
+            <Button onClick={clear} variant='contained' color='primary'>
+              Confirmar compra
             </Button>
           </div>
         </>

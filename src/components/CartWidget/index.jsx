@@ -11,7 +11,7 @@ const CartWidget = () => {
       <>
         <ShoppingCartIcon fontSize="large" style={ { color: blueGrey[100] } } />
 
-        <div className=' text-red-500 bg-gray-300 rounded-full ml-1 border-gray-300'>
+        <div style={ { color: blueGrey[100] } }>
           {totalItems}
         </div>
       </>
