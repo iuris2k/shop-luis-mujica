@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button'
 import './cart.css'
 import { useCart } from '../../context/CartContext'
 
-export const Cart = () => {
+const Cart = () => {
   const { cart, removeItem, totalItems, totalPrecio, clear } = useCart()
 
   const generarOrden = () => {
@@ -71,3 +71,5 @@ export const Cart = () => {
     </div>
   )
 }
+
+export default Cart
