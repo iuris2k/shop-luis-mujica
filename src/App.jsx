@@ -11,7 +11,7 @@ import ItemDetailContainer from './containers/ItemDetailContainer'
 // import CartContainer from './containers/CartContainer'
 import Cart from './components/Cart/cart'
 import './App.css'
-import Demo from './heroSection'
+import Demo from './components/HeroSection'
 
 function App() {
   return (
