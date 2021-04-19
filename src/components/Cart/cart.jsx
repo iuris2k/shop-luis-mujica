@@ -55,7 +55,7 @@ const Cart = () => {
           ))}
           <div className='total'>
             <p>
-              Total: {totalItems} y ${totalPrecio}
+              El total de productos es: {totalItems} y el precio total de tu compra es: ${totalPrecio}
             </p>
             <Button onClick={clear} variant='contained' color='secondary'>
               Eliminar todos los items

@@ -22,7 +22,7 @@ function App() {
           <Switch>
             <Route exact path='/'>
               <Demo />
-              <ItemListContainer />
+
             </Route>
             <Route exact path='/cart'>
               <Cart />
