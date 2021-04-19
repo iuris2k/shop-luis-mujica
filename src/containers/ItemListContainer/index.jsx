@@ -20,7 +20,13 @@ const ItemListContainer = () => {
     const db = getFirestore()
     const itemCollection = db.collection( 'Items' )
 
-    const filter = itemCollection.where('category', '==', categoryId)
+    let filter
+    if (categoryId) {
+      filter = itemCollection.where('category', '==', categoryId)
+    } else {
+      filter = itemCollection
+    }
+
 
     const myPromise = filter.get()
     myPromise.then((snapshot) => {

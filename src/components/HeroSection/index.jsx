@@ -22,7 +22,7 @@ export default function Demo() {
           fontSize={{ xs: 'h6.fontSize', sm: 'h4.fontSize', md: 'h3.fontSize' }}
           p={{ xs: 2, sm: 3, md: 4 }}
         >
-          Iuris-Tech
+          Iuris-Tech:
           Tecnología futurista
         </Box>
       </ThemeProvider>
