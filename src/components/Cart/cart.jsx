@@ -1,10 +1,10 @@
-/* eslint-disable import/prefer-default-export */
 /* eslint-disable no-unused-vars */
 import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import Button from '@material-ui/core/Button'
 import './cart.css'
 import { useCart } from '../../context/CartContext'
+import {getFirestore} from '../../firebase'
 
 const Cart = () => {
   const { cart, removeItem, totalItems, totalPrecio, clear } = useCart()

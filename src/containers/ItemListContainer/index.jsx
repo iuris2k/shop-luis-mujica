@@ -42,16 +42,23 @@ const ItemListContainer = () => {
     } )
   }, [categoryId])
 
-  if (isLoading) {
-    return (
-      <>
-        <h2 className="loading">Cargando productos...</h2>
-        <br/>
-        <LinearIndeterminate />
-      </>
-    )
-  }
+  return <>
+    {isLoading && <LinearIndeterminate /> }
+    {!isLoading && <ItemList products={products} />}
 
-  return <ItemList products={products} />
+  </>
+
+
+  // if (isLoading) {
+  //   return (
+  //     <>
+  //       <h2 className="loading">Cargando productos...</h2>
+  //       <br/>
+  //       <LinearIndeterminate />
+  //     </>
+  //   )
+  // }
+
+  // return <ItemList products={products} />
 }
 export default ItemListContainer
