@@ -1,29 +1,36 @@
 /* eslint-disable no-unused-vars */
 import React, {useEffect, useState} from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
 import Button from '@material-ui/core/Button'
 import './cart.css'
 import { useCart } from '../../context/CartContext'
-import {getFirestore} from '../../firebase'
+import {createOrder} from '../../services/ordersService'
 
 const Cart = () => {
-  const { cart, removeItem, totalItems, totalPrecio, clear } = useCart()
+  const [name, setName] = useState('')
+  const [phone, setPhone] = useState('')
+  const [email, setEmail] = useState('')
+  const history = useHistory()
 
-  const generarOrden = () => {
-    const order = {}
+  const {cart, removeItem, totalItems, totalPrecio, clear} = useCart()
 
-    order.buyer = { name: "Juan", phone: "tel", email: "tel@gmail.com" }
-    order.total = totalPrecio
-    order.items = cart.map( cartItem => {
-      const {id} = cartItem.item
-      const title = cartItem.item.name
-      const price = cartItem.item.price * cartItem.quantity
+  const guardarOrden = (e) => {
+    e.preventDefault()
+    const buyer = {name, phone, email}
 
-      return { id, title, price }
-    } )
-    console.log(order)
+    const items = cart.map((cartItem) => ({
+      id: cartItem.item.id,
+      title: cartItem.item.name,
+      price: cartItem.item.price,
+      quantity: cartItem.quantity,
+    }))
+
+    const order = {buyers: buyer, items, total: totalPrecio}
+    createOrder(order).then((orderCreated) => {
+      clear()
+      history.push(`/orders/${orderCreated.id}`)
+    })
   }
-
 
   return (
     <div className='cartContainer'>
@@ -40,7 +47,12 @@ const Cart = () => {
         <>
           {cart.map((cartItem) => (
             <div key={cartItem.item.id}>
-              <h3 className='title'>Producto: {cartItem.item.name}</h3>
+              <h3 className='title'>Producto: { cartItem.item.name }</h3>
+              <img
+                alt=''
+                src={cartItem.item.pictureUrl}
+                style={{minHeight: '200px', maxHeight: '200px'}}
+              />
               <p className='quantity'>Cantidad: {cartItem.quantity}</p>
               <p className='quantity'>Precio: ${cartItem.item.price}</p>
 
@@ -66,6 +78,24 @@ const Cart = () => {
                   Confirmar compra
             </Button>
           </div>
+          <form action='' onSubmit={guardarOrden}>
+            <input
+              type='text'
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <input
+              type='text'
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />
+            <input
+              type='text'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <button type='submit'>Generar orden</button>
+          </form>
         </>
       )}
     </div>

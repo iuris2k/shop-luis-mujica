@@ -8,10 +8,10 @@ import Navbar from './components/Navbar/Navbar'
 import ItemListContainer from './containers/ItemListContainer'
 import Footer from './components/Footer'
 import ItemDetailContainer from './containers/ItemDetailContainer'
-// import CartContainer from './containers/CartContainer'
 import Cart from './components/Cart/cart'
 import './App.css'
 import Demo from './components/HeroSection'
+import {Orders} from './components/Orders/Orders'
 
 function App() {
   return (
@@ -26,6 +26,12 @@ function App() {
             </Route>
             <Route exact path='/cart'>
               <Cart />
+            </Route>
+            <Route exact path='/orders'>
+              <Orders />
+            </Route>
+            <Route exact path='/orders/:orderId'>
+              <Orders />
             </Route>
             <Route path='/Category/:categoryId'>
               <ItemListContainer />

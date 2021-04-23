@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react'
 import { getCategories } from '../mocks/productService'
 

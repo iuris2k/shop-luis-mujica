@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-// import { LinearProgress } from '@material-ui/core'
 import LinearIndeterminate from '../../components/MaterialUI/LinearIndeterminate'
 import ItemList from '../../components/ItemList'
-// import { getProducts } from '../../mocks/productService'
-import {getFirestore} from '../../firebase'
+import { getProducts } from '../../services/productsService'
 import '../../App.css'
 import './loading.css'
 
@@ -17,29 +15,10 @@ const ItemListContainer = () => {
   useEffect(() => {
     setIsLoading(true)
 
-    const db = getFirestore()
-    const itemCollection = db.collection( 'Items' )
-
-    let filter
-    if (categoryId) {
-      filter = itemCollection.where('category', '==', categoryId)
-    } else {
-      filter = itemCollection
-    }
-
-
-    const myPromise = filter.get()
-    myPromise.then((snapshot) => {
-      console.log('se consultaron los datos')
-      console.log(snapshot)
-
-      if (snapshot.size > 0) {
-        console.log(snapshot.docs.map((doc) => doc.data()))
-        console.log(snapshot.docs.map((doc) => doc.id))
-        setProducts(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
-      }
+    getProducts(categoryId).then((productList) => {
+      setProducts(productList)
       setIsLoading(false)
-    } )
+    })
   }, [categoryId])
 
   return <>
