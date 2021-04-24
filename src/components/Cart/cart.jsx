@@ -81,20 +81,26 @@ const Cart = () => {
           <form action='' onSubmit={guardarOrden}>
             <input
               type='text'
+              placeholder="Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
+            <br />
             <input
-              type='text'
+              type='number'
+              placeholder="Phone"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
             />
+            <br />
             <input
               type='text'
+              placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <button type='submit'>Generar orden</button>
+            <br />
+            <Button variant='contained' color='primary' type='submit'>Generar orden</Button>
           </form>
         </>
       )}

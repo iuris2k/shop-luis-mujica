@@ -1,7 +1,8 @@
 /* eslint-disable import/prefer-default-export */
 import React, {useEffect, useState} from 'react'
 import {useParams, Link} from 'react-router-dom'
-import {getOrders} from '../../services/ordersService'
+import { blueGrey } from '@material-ui/core/colors'
+import { getOrders } from '../../services/ordersService'
 
 export function Orders() {
   const [orders, setOrders] = useState([])
@@ -22,7 +23,7 @@ export function Orders() {
   return (
     <>
       <div className='orders'>
-        <h4>Mis ordenes</h4>
+        <h4 style={ { color: blueGrey[100] } }>Mis ordenes</h4>
         {!orderId && (
           <div>
             <ul>
