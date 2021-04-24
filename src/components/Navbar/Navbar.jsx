@@ -24,13 +24,15 @@ const Navbar = () => {
               {c}
             </NavLink>
           ) ) }
-          <NavLink
-            to='/orders'
-            activeClassName='active'
-            className='c-nav-link'
-          >
-                Ordenes
-          </NavLink>
+          <div className="navbar-nav">
+            <NavLink
+              to='/orders'
+              activeClassName='active'
+              className='nav-item nav-link'
+            >
+              Ordenes
+            </NavLink>
+          </div>
         </div>
       </div>
       <NavLink to='/cart' className='nav-item nav-link'>
