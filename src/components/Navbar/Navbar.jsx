@@ -30,7 +30,7 @@ const Navbar = () => {
               activeClassName='active'
               className='nav-item nav-link'
             >
-              Ordenes
+              Orders
             </NavLink>
           </div>
         </div>

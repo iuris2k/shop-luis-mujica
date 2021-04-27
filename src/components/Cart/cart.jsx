@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react'
 import {Link, useHistory} from 'react-router-dom'
 import Button from '@material-ui/core/Button'
 import './cart.css'
-import { useCart } from '../../context/CartContext'
+import {useCart} from '../../context/CartContext'
 import {createOrder} from '../../services/ordersService'
 
 const Cart = () => {
@@ -47,7 +47,7 @@ const Cart = () => {
         <>
           {cart.map((cartItem) => (
             <div key={cartItem.item.id}>
-              <h3 className='title'>Producto: { cartItem.item.name }</h3>
+              <h3 className='title'>Producto: {cartItem.item.name}</h3>
               <img
                 alt=''
                 src={cartItem.item.pictureUrl}
@@ -67,7 +67,8 @@ const Cart = () => {
           ))}
           <div className='total'>
             <p>
-              El total de productos es: {totalItems} y el precio total de tu compra es: ${totalPrecio}
+              El total de productos es: {totalItems} y el precio total de tu
+              compra es: ${totalPrecio}
             </p>
             <Button onClick={clear} variant='contained' color='secondary'>
               Eliminar todos los items
@@ -75,32 +76,34 @@ const Cart = () => {
           </div>
           <div>
             <Button onClick={clear} variant='contained' color='primary'>
-                  Confirmar compra
+              Confirmar compra
             </Button>
           </div>
           <form action='' onSubmit={guardarOrden}>
             <input
               type='text'
-              placeholder="Name"
+              placeholder='Name'
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
             <br />
             <input
               type='number'
-              placeholder="Phone"
+              placeholder='Phone'
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
             />
             <br />
             <input
               type='text'
-              placeholder="Email"
+              placeholder='Email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <br />
-            <Button variant='contained' color='primary' type='submit'>Generar orden</Button>
+            <Button variant='contained' color='primary' type='submit'>
+              Generar orden
+            </Button>
           </form>
         </>
       )}

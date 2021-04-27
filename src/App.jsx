@@ -11,7 +11,7 @@ import ItemDetailContainer from './containers/ItemDetailContainer'
 import Cart from './components/Cart/cart'
 import './App.css'
 import Demo from './components/HeroSection'
-import {Orders} from './components/Orders/Orders'
+import { Orders } from './components/Orders/Orders'
 
 function App() {
   return (
