@@ -7,9 +7,11 @@ import {useCart} from '../../context/CartContext'
 import {createOrder} from '../../services/ordersService'
 
 const Cart = () => {
-  const [name, setName] = useState('')
+  const [name, setName] = useState( '' )
+  const [lastName, setLastName] = useState('')
   const [phone, setPhone] = useState('')
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState( '' )
+  const [email2, setEmail2] = useState( '' )
   const history = useHistory()
 
   const {cart, removeItem, totalItems, totalPrecio, clear} = useCart()
@@ -88,6 +90,13 @@ const Cart = () => {
             />
             <br />
             <input
+              type='text'
+              placeholder='Last Name'
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+            />
+            <br />
+            <input
               type='number'
               placeholder='Phone'
               value={phone}
@@ -101,7 +110,14 @@ const Cart = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
             <br />
-            <Button variant='contained' color='primary' type='submit'>
+            <input
+              type='text'
+              placeholder='Reitere su Email'
+              value={email2}
+              onChange={(e) => setEmail2(e.target.value)}
+            />
+            <br />
+            <Button variant='contained' color='primary' type='submit' disabled={!!(!name || !lastName || !phone || !email || !email2 || !(email === email2))}>
               Generar orden
             </Button>
           </form>
