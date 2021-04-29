@@ -1,8 +1,9 @@
 /* eslint-disable import/prefer-default-export */
 import React, {useEffect, useState} from 'react'
-import {useParams, Link} from 'react-router-dom'
-import { blueGrey } from '@material-ui/core/colors'
-import { getOrders } from '../../services/ordersService'
+import { useParams, Link } from 'react-router-dom'
+import {blueGrey} from '@material-ui/core/colors'
+import Button from '@material-ui/core/Button'
+import {getOrders} from '../../services/ordersService'
 
 export function Orders() {
   const [orders, setOrders] = useState([])
@@ -23,13 +24,12 @@ export function Orders() {
   return (
     <>
       <div className='orders'>
-        <h4 style={ { color: blueGrey[100] } }>Mis ordenes</h4>
+        <h4 style={{color: blueGrey[100]}}>Mis ordenes</h4>
         {!orderId && (
           <div>
             <ul>
               {orders.map((o) => (
                 <li key={o.id}>
-                  {' '}
                   <Link to={`/orders/${o.id}`}>{o.id}</Link>
                 </li>
               ))}
@@ -38,6 +38,12 @@ export function Orders() {
         )}
         {orderId && <code>{JSON.stringify(currentOrder)}</code>}
       </div>
+      <Link to='/orders'>
+        <Button variant='contained' color='primary' >
+          Ver numero de orden
+        </Button>
+      </Link>
+
     </>
   )
 }
