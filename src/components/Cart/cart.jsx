@@ -76,11 +76,6 @@ const Cart = () => {
               Eliminar todos los items
             </Button>
           </div>
-          <div>
-            <Button onClick={clear} variant='contained' color='primary'>
-              Confirmar compra
-            </Button>
-          </div>
           <form action='' onSubmit={guardarOrden}>
             <input
               type='text'
