@@ -28,6 +28,9 @@ Finally, we will upload our purchase to the cart.
 
 ![](src/img/Iuris-Tech.png)
 
+## Preview
+![](src/img/Iuris-Tech.gif)
+
 ## Install
 
 ```sh
@@ -45,6 +48,22 @@ npm run start
 ```sh
 npm run test
 ```
+
+## Used dependencies
+
+[animate.css](https://animate.style/),
+[bootstrap](https://getbootstrap.com/),
+[firebase](https://firebase.google.com/),
+[husky](https://typicode.github.io/husky/#/),
+[lint-staged](https://www.npmjs.com/package/lint-staged/v/7.3.0),
+[prop-types](https://www.npmjs.com/package/prop-types),
+[react](https://es.reactjs.org/),
+[react-bootstrap](https://react-bootstrap.github.io/),
+[react-dom](https://es.reactjs.org/docs/react-dom.html),
+[react-router-dom](https://www.npmjs.com/package/react-router-dom),
+[react-scripts](https://www.npmjs.com/package/react-scripts),
+[styled-components](https://styled-components.com/),
+[material-ui](https://material-ui.com/)
 
 ## Author
 
