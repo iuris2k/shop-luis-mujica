@@ -43,12 +43,6 @@ npm install
 npm run start
 ```
 
-## Run tests
-
-```sh
-npm run test
-```
-
 ## Used dependencies
 
 ### * React Js
