@@ -59,6 +59,7 @@ npm run start
 
 ### * Linters
 
+[ESLint](https://eslint.org/),
 [lint-staged](https://www.npmjs.com/package/lint-staged/v/7.3.0),
 [husky](https://typicode.github.io/husky/#/),
 [styled-components](https://styled-components.com/),
@@ -66,9 +67,9 @@ npm run start
 ### * Styles
 
 [material-ui](https://material-ui.com/),
+[react-bootstrap](https://react-bootstrap.github.io/),
 [animate.css](https://animate.style/),
 [bootstrap](https://getbootstrap.com/),
-[react-bootstrap](https://react-bootstrap.github.io/),
 
 ## Author
 
