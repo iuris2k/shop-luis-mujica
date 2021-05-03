@@ -67,6 +67,7 @@ npm run start
 ### * Linters
 
 [ESLint](https://eslint.org/),
+[Prettier](https://prettier.io/)
 [lint-staged](https://www.npmjs.com/package/lint-staged/v/7.3.0),
 [husky](https://typicode.github.io/husky/#/),
 [styled-components](https://styled-components.com/),
