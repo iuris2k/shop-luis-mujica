@@ -8,7 +8,7 @@
 
 This project was created with the idea of being an E-commerce for electronic items.
 
-We have 6 products in inventory with a stock of 5 items each.
+We have 6 products in inventory with a stock of 15 items each.
 
 The idea is to classify the categories:
 
