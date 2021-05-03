@@ -7,7 +7,7 @@ import Box from '@material-ui/core/Box'
 
 const theme = createMuiTheme()
 
-export default function Demo() {
+export default function Ordersc() {
   return (
     <NoSsr>
       <ThemeProvider theme={theme}>
@@ -18,8 +18,7 @@ export default function Demo() {
           fontSize={{ xs: 'h6.fontSize', sm: 'h4.fontSize', md: 'h3.fontSize' }}
           p={{ xs: 2, sm: 3, md: 4 }}
         >
-          Iuris-Tech:
-          Tecnología de punta
+          Orders
         </Box>
       </ThemeProvider>
     </NoSsr>
