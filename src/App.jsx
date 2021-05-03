@@ -11,7 +11,6 @@ import ItemDetailContainer from './containers/ItemDetailContainer'
 import Cart from './components/Cart/cart'
 import './App.css'
 import Demo from './components/HeroSection'
-import Ordersc from './components/HeroSection/ordersc'
 import { Orders } from './components/Orders/Orders'
 
 function App() {
@@ -29,7 +28,6 @@ function App() {
               <Cart />
             </Route>
             <Route exact path='/orders'>
-              <Ordersc />
               <Orders />
             </Route>
             <Route exact path='/orders/:orderId'>
