@@ -45,7 +45,7 @@ npm run start
 
 ## Dependencies
 
-### `* React Js`
+### `React Js`
 
 [react](https://es.reactjs.org/),
 [react-dom](https://es.reactjs.org/docs/react-dom.html),
@@ -53,18 +53,18 @@ npm run start
 [react-scripts](https://www.npmjs.com/package/react-scripts),
 [prop-types](https://www.npmjs.com/package/prop-types),
 
-### `* Firebase`
+### `Firebase`
 
 [firebase](https://firebase.google.com/),
 
-### `* Styles`
+### `Styles`
 
 [material-ui](https://material-ui.com/),
 [react-bootstrap](https://react-bootstrap.github.io/),
 [animate.css](https://animate.style/),
 [bootstrap](https://getbootstrap.com/),
 
-### `* Linters`
+### `Linters`
 
 [ESLint](https://eslint.org/),
 [Prettier](https://prettier.io/),
