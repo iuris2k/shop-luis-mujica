@@ -43,7 +43,7 @@ npm install
 npm run start
 ```
 
-## Used dependencies
+## Dependencies
 
 ### * React Js
 
